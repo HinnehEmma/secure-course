@@ -1,0 +1,666 @@
+{
+  "year_1": {
+    "semester_1": [
+      {
+        "course_code": "CS101",
+        "course_name": "Introduction to Programming",
+        "is_elective": false,
+        "classroom_code": "B101",
+        "lecturer": "Dr. John Smith",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "MATH101",
+        "course_name": "Calculus I",
+        "is_elective": false,
+        "classroom_code": "A102",
+        "lecturer": "Dr. Jane Doe",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PHYS101",
+        "course_name": "Physics I",
+        "is_elective": false,
+        "classroom_code": "C103",
+        "lecturer": "Prof. Richard Roe",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "HIST101",
+        "course_name": "World History",
+        "is_elective": true,
+        "classroom_code": "D104",
+        "lecturer": "Dr. Alice Johnson",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "ENG101",
+        "course_name": "English Composition",
+        "is_elective": false,
+        "classroom_code": "E105",
+        "lecturer": "Prof. Michael Brown",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "BIO101",
+        "course_name": "Biology I",
+        "is_elective": false,
+        "classroom_code": "F106",
+        "lecturer": "Dr. Susan Green",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CHEM101",
+        "course_name": "Chemistry I",
+        "is_elective": false,
+        "classroom_code": "G107",
+        "lecturer": "Dr. Robert Black",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PSY101",
+        "course_name": "Introduction to Psychology",
+        "is_elective": true,
+        "classroom_code": "H108",
+        "lecturer": "Dr. Emma White",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "PHIL101",
+        "course_name": "Ethics",
+        "is_elective": true,
+        "classroom_code": "I109",
+        "lecturer": "Dr. Thomas Gray",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "ART101",
+        "course_name": "Introduction to Art",
+        "is_elective": true,
+        "classroom_code": "J110",
+        "lecturer": "Dr. Laura Blue",
+        "hours_per_week": 2
+      }
+    ],
+    "semester_2": [
+      {
+        "course_code": "CS102",
+        "course_name": "Object-Oriented Programming",
+        "is_elective": false,
+        "classroom_code": "B102",
+        "lecturer": "Dr. John Smith",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "MATH102",
+        "course_name": "Linear Algebra I",
+        "is_elective": false,
+        "classroom_code": "A103",
+        "lecturer": "Dr. Jane Doe",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PHYS102",
+        "course_name": "Mechanics",
+        "is_elective": false,
+        "classroom_code": "C104",
+        "lecturer": "Prof. Richard Roe",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "SOC101",
+        "course_name": "Introduction to Sociology",
+        "is_elective": true,
+        "classroom_code": "D105",
+        "lecturer": "Dr. Alice Johnson",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "ENG102",
+        "course_name": "Academic Writing",
+        "is_elective": false,
+        "classroom_code": "E106",
+        "lecturer": "Prof. Michael Brown",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "BIO102",
+        "course_name": "Biology II",
+        "is_elective": false,
+        "classroom_code": "F107",
+        "lecturer": "Dr. Susan Green",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CHEM102",
+        "course_name": "Chemistry II",
+        "is_elective": false,
+        "classroom_code": "G108",
+        "lecturer": "Dr. Robert Black",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PSY102",
+        "course_name": "Developmental Psychology",
+        "is_elective": true,
+        "classroom_code": "H109",
+        "lecturer": "Dr. Emma White",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "PHIL102",
+        "course_name": "Philosophy of Science",
+        "is_elective": true,
+        "classroom_code": "I110",
+        "lecturer": "Dr. Thomas Gray",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "ART102",
+        "course_name": "Modern Art",
+        "is_elective": true,
+        "classroom_code": "J111",
+        "lecturer": "Dr. Laura Blue",
+        "hours_per_week": 2
+      }
+    ]
+  },
+  "year_2": {
+    "semester_1": [
+      {
+        "course_code": "CS201",
+        "course_name": "Data Structures",
+        "is_elective": false,
+        "classroom_code": "B201",
+        "lecturer": "Dr. Emily Davis",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "MATH201",
+        "course_name": "Calculus II",
+        "is_elective": false,
+        "classroom_code": "A202",
+        "lecturer": "Dr. Matthew Wilson",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PHYS201",
+        "course_name": "Physics II",
+        "is_elective": false,
+        "classroom_code": "C203",
+        "lecturer": "Prof. Sarah Martinez",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "PHIL201",
+        "course_name": "Introduction to Philosophy",
+        "is_elective": true,
+        "classroom_code": "D204",
+        "lecturer": "Dr. David Garcia",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "ENG201",
+        "course_name": "Technical Writing",
+        "is_elective": false,
+        "classroom_code": "E205",
+        "lecturer": "Prof. Jessica Thomas",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "BIO201",
+        "course_name": "Genetics",
+        "is_elective": false,
+        "classroom_code": "F206",
+        "lecturer": "Dr. Linda Brown",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CHEM201",
+        "course_name": "Organic Chemistry",
+        "is_elective": false,
+        "classroom_code": "G207",
+        "lecturer": "Dr. William Harris",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PSY201",
+        "course_name": "Cognitive Psychology",
+        "is_elective": true,
+        "classroom_code": "H208",
+        "lecturer": "Dr. Maria Green",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "PHIL202",
+        "course_name": "Logic",
+        "is_elective": true,
+        "classroom_code": "I209",
+        "lecturer": "Dr. James Gray",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "ART201",
+        "course_name": "Sculpture",
+        "is_elective": true,
+        "classroom_code": "J210",
+        "lecturer": "Dr. Patricia White",
+        "hours_per_week": 2
+      }
+    ],
+    "semester_2": [
+      {
+        "course_code": "CS202",
+        "course_name": "Computer Architecture",
+        "is_elective": false,
+        "classroom_code": "B202",
+        "lecturer": "Dr. Emily Davis",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "MATH202",
+        "course_name": "Discrete Mathematics",
+        "is_elective": false,
+        "classroom_code": "A203",
+        "lecturer": "Dr. Matthew Wilson",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PHYS202",
+        "course_name": "Electromagnetism",
+        "is_elective": false,
+        "classroom_code": "C204",
+        "lecturer": "Prof. Sarah Martinez",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "SOC201",
+        "course_name": "Social Psychology",
+        "is_elective": true,
+        "classroom_code": "D205",
+        "lecturer": "Dr. David Garcia",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "ENG202",
+        "course_name": "Professional Communication",
+        "is_elective": false,
+        "classroom_code": "E206",
+        "lecturer": "Prof. Jessica Thomas",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "BIO202",
+        "course_name": "Microbiology",
+        "is_elective": false,
+        "classroom_code": "F207",
+        "lecturer": "Dr. Linda Brown",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CHEM202",
+        "course_name": "Physical Chemistry",
+        "is_elective": false,
+        "classroom_code": "G208",
+        "lecturer": "Dr. William Harris",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PSY202",
+        "course_name": "Social Psychology",
+        "is_elective": true,
+        "classroom_code": "H209",
+        "lecturer": "Dr. Maria Green",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "PHIL203",
+        "course_name": "Philosophy of Mind",
+        "is_elective": true,
+        "classroom_code": "I210",
+        "lecturer": "Dr. James Gray",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "ART202",
+        "course_name": "Art Theory",
+        "is_elective": true,
+        "classroom_code": "J211",
+        "lecturer": "Dr. Patricia White",
+        "hours_per_week": 2
+      }
+    ]
+  },
+  "year_3": {
+    "semester_1": [
+      {
+        "course_code": "CS301",
+        "course_name": "Algorithms",
+        "is_elective": false,
+        "classroom_code": "B301",
+        "lecturer": "Dr. Christopher Lee",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "MATH301",
+        "course_name": "Linear Algebra",
+        "is_elective": false,
+        "classroom_code": "A302",
+        "lecturer": "Dr. Patricia White",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "CS302",
+        "course_name": "Operating Systems",
+        "is_elective": false,
+        "classroom_code": "C303",
+        "lecturer": "Prof. Daniel Harris",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "HIST301",
+        "course_name": "Modern History",
+        "is_elective": true,
+        "classroom_code": "D304",
+        "lecturer": "Dr. Barbara Clark",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CS303",
+        "course_name": "Database Systems",
+        "is_elective": false,
+        "classroom_code": "E305",
+        "lecturer": "Prof. Steven Lewis",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "BIO301",
+        "course_name": "Evolutionary Biology",
+        "is_elective": false,
+        "classroom_code": "F306",
+        "lecturer": "Dr. Helen Scott",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CHEM301",
+        "course_name": "Inorganic Chemistry",
+        "is_elective": false,
+        "classroom_code": "G307",
+        "lecturer": "Dr. Kevin Johnson",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PSY301",
+        "course_name": "Behavioral Psychology",
+        "is_elective": true,
+        "classroom_code": "H308",
+        "lecturer": "Dr. Maria Green",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "PHIL301",
+        "course_name": "Epistemology",
+        "is_elective": true,
+        "classroom_code": "I309",
+        "lecturer": "Dr. Andrew Brown",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "ART301",
+        "course_name": "Digital Art",
+        "is_elective": true,
+        "classroom_code": "J310",
+        "lecturer": "Dr. Laura Blue",
+        "hours_per_week": 2
+      }
+    ],
+    "semester_2": [
+      {
+        "course_code": "CS304",
+        "course_name": "Software Engineering",
+        "is_elective": false,
+        "classroom_code": "B302",
+        "lecturer": "Dr. Christopher Lee",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "MATH302",
+        "course_name": "Probability and Statistics",
+        "is_elective": false,
+        "classroom_code": "A303",
+        "lecturer": "Dr. Patricia White",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "CS305",
+        "course_name": "Computer Networks",
+        "is_elective": false,
+        "classroom_code": "C304",
+        "lecturer": "Prof. Daniel Harris",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "SOC301",
+        "course_name": "Cultural Anthropology",
+        "is_elective": true,
+        "classroom_code": "D305",
+        "lecturer": "Dr. Barbara Clark",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CS306",
+        "course_name": "Web Development",
+        "is_elective": false,
+        "classroom_code": "E306",
+        "lecturer": "Prof. Steven Lewis",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "BIO302",
+        "course_name": "Cell Biology",
+        "is_elective": false,
+        "classroom_code": "F307",
+        "lecturer": "Dr. Helen Scott",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CHEM302",
+        "course_name": "Analytical Chemistry",
+        "is_elective": false,
+        "classroom_code": "G308",
+        "lecturer": "Dr. Kevin Johnson",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PSY302",
+        "course_name": "Neuropsychology",
+        "is_elective": true,
+        "classroom_code": "H309",
+        "lecturer": "Dr. Maria Green",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "PHIL302",
+        "course_name": "Political Philosophy",
+        "is_elective": true,
+        "classroom_code": "I310",
+        "lecturer": "Dr. Andrew Brown",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "ART302",
+        "course_name": "Art Criticism",
+        "is_elective": true,
+        "classroom_code": "J311",
+        "lecturer": "Dr. Laura Blue",
+        "hours_per_week": 2
+      }
+    ]
+  },
+  "year_4": {
+    "semester_1": [
+      {
+        "course_code": "CS401",
+        "course_name": "Machine Learning",
+        "is_elective": false,
+        "classroom_code": "B401",
+        "lecturer": "Dr. Susan Robinson",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CS402",
+        "course_name": "Computer Networks",
+        "is_elective": false,
+        "classroom_code": "A402",
+        "lecturer": "Dr. George Walker",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "CS403",
+        "course_name": "Software Engineering",
+        "is_elective": false,
+        "classroom_code": "C403",
+        "lecturer": "Prof. Linda Hall",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "ART401",
+        "course_name": "Art History",
+        "is_elective": true,
+        "classroom_code": "D404",
+        "lecturer": "Dr. Paul Young",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CS404",
+        "course_name": "Artificial Intelligence",
+        "is_elective": false,
+        "classroom_code": "E405",
+        "lecturer": "Prof. Nancy King",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "BIO401",
+        "course_name": "Genetics",
+        "is_elective": false,
+        "classroom_code": "F406",
+        "lecturer": "Dr. Anna Baker",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CHEM401",
+        "course_name": "Biochemistry",
+        "is_elective": false,
+        "classroom_code": "G407",
+        "lecturer": "Dr. William Harris",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PSY401",
+        "course_name": "Cognitive Psychology",
+        "is_elective": true,
+        "classroom_code": "H408",
+        "lecturer": "Dr. Maria Green",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "PHIL401",
+        "course_name": "Ethics",
+        "is_elective": true,
+        "classroom_code": "I409",
+        "lecturer": "Dr. James Gray",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "ART402",
+        "course_name": "Contemporary Art",
+        "is_elective": true,
+        "classroom_code": "J410",
+        "lecturer": "Dr. Patricia White",
+        "hours_per_week": 2
+      }
+    ],
+    "semester_2": [
+      {
+        "course_code": "CS405",
+        "course_name": "Natural Language Processing",
+        "is_elective": false,
+        "classroom_code": "B402",
+        "lecturer": "Dr. Susan Robinson",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CS406",
+        "course_name": "Data Mining",
+        "is_elective": false,
+        "classroom_code": "A403",
+        "lecturer": "Dr. George Walker",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "CS407",
+        "course_name": "Cybersecurity",
+        "is_elective": false,
+        "classroom_code": "C404",
+        "lecturer": "Prof. Linda Hall",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "PSY402",
+        "course_name": "Developmental Psychology",
+        "is_elective": true,
+        "classroom_code": "D405",
+        "lecturer": "Dr. Maria Green",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CS408",
+        "course_name": "Big Data Analytics",
+        "is_elective": false,
+        "classroom_code": "E406",
+        "lecturer": "Prof. Nancy King",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "BIO402",
+        "course_name": "Molecular Biology",
+        "is_elective": false,
+        "classroom_code": "F407",
+        "lecturer": "Dr. Anna Baker",
+        "hours_per_week": 3
+      },
+      {
+        "course_code": "CHEM402",
+        "course_name": "Environmental Chemistry",
+        "is_elective": false,
+        "classroom_code": "G408",
+        "lecturer": "Dr. William Harris",
+        "hours_per_week": 4
+      },
+      {
+        "course_code": "PHIL402",
+        "course_name": "Philosophy of Science",
+        "is_elective": true,
+        "classroom_code": "H409",
+        "lecturer": "Dr. James Gray",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "ART403",
+        "course_name": "Art and Society",
+        "is_elective": true,
+        "classroom_code": "I410",
+        "lecturer": "Dr. Patricia White",
+        "hours_per_week": 2
+      },
+      {
+        "course_code": "SOC401",
+        "course_name": "Global Sociology",
+        "is_elective": true,
+        "classroom_code": "J411",
+        "lecturer": "Dr. David Garcia",
+        "hours_per_week": 3
+      }
+    ]
+  }
+}
