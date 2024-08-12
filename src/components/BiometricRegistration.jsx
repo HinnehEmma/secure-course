@@ -32,6 +32,8 @@ const BiometricRegistration = ({ user }) => {
         },
       });
       console.log(response);
+      //
+
       toast.success("Biometric Registration Completed, Authenticate Now", { position: "top-center" });
     } catch (error) {
       toast.error("Oops,an error occured, refresh session", { position: "top-center" });
@@ -39,24 +41,21 @@ const BiometricRegistration = ({ user }) => {
     }
   };
 
-  const handleAuthenticate = () => {
-    face
-      .authenticate({
+  const handleAuthenticate = async () => {
+    try {
+      const response = await face.authenticate({
         locale: "auto",
-      })
-      .then((response) => {
-        // your logic after enrollent goes here
-        console.log(response);
-        toast.success("Authentication Successfull", { position: "top-center" });
-        // router.reload();
-      })
-      .catch((err) => {
-        // your logic after error goes here
-        console.log(err);
-        toast.error("Oops,an error occured, refresh session", { position: "top-center" });
-
-        // router.reload();
       });
+      console.log(response);
+      //
+
+      toast.success("Authentication Successfull", { position: "top-center" });
+      handleRefreshSession();
+    } catch (error) {
+      console.log(err);
+      toast.error("Oops,an error occured, refresh session", { position: "top-center" });
+      handleRefreshSession();
+    }
   };
 
   const handleRefreshSession = () => {
