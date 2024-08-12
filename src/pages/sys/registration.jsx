@@ -7,12 +7,14 @@ import { useRegistrations } from "@/context/registration-context";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { toast } from "sonner";
+import BiometricRegistration from "@/components/BiometricRegistration";
 
 function RegistrationPage() {
   const { registrations, loading } = useRegistrations();
   const { currentUserDetails } = useAuth();
 
-  console.log(registrations)
+  console.log(registrations);
+  console.log(currentUserDetails);
 
   function downloadRegistrationPDF() {
     const doc = new jsPDF();
@@ -24,12 +26,7 @@ function RegistrationPage() {
       doc.addImage(img, "PNG", 10, 10, 35, 35);
 
       doc.setFontSize(14);
-      doc.text(
-        "KWAME NKRUMAH UNIVERSITY OF SCIENCE AND TECHNOLOGY, KUMASI",
-        10,
-        50,
-        { align: "left" }
-      );
+      doc.text("KWAME NKRUMAH UNIVERSITY OF SCIENCE AND TECHNOLOGY, KUMASI", 10, 50, { align: "left" });
       doc.setFontSize(12);
       doc.text("COURSE REGISTRATION", 10, 55, {
         align: "left",
@@ -69,19 +66,13 @@ function RegistrationPage() {
 
         doc.setFontSize(10);
         doc.text(
-          `Credits registered: ${registrations[0].courses.reduce(
-            (acc, item) => acc + item.hours_per_week,
-            0
-          )} `,
+          `Credits registered: ${registrations[0].courses.reduce((acc, item) => acc + item.hours_per_week, 0)} `,
           10,
           yPosition
         );
         yPosition += 10;
         doc.text(
-          `Number of subjects: ${registrations.reduce(
-            (acc, item) => acc + item.courses.length,
-            0
-          )}`,
+          `Number of subjects: ${registrations.reduce((acc, item) => acc + item.courses.length, 0)}`,
           10,
           yPosition
         );
@@ -95,11 +86,7 @@ function RegistrationPage() {
       doc.text("Academic Supervisor/ Registration Officer", 10, yPosition);
       doc.text("Student's Signature", 150, yPosition);
       yPosition += 10;
-      doc.text(
-        "REGISTRATION IS ONLY VALID AFTER BIOMETRIC VERIFICATION",
-        10,
-        yPosition
-      );
+      doc.text("REGISTRATION IS ONLY VALID AFTER BIOMETRIC VERIFICATION", 10, yPosition);
 
       doc.save(`${currentUserDetails.name}-COURSE REGISTRATION.pdf`);
     };
@@ -139,10 +126,7 @@ function RegistrationPage() {
                           </h5>
                           <div>
                             {item.courses.map((course, courseIndex) => (
-                              <div
-                                className="border-b p-5 my-2"
-                                key={course.course_code + courseIndex}
-                              >
+                              <div className="border-b p-5 my-2" key={course.course_code + courseIndex}>
                                 <p>{course.course_name}</p>
                                 <p>{course.course_code}</p>
                               </div>
@@ -155,10 +139,7 @@ function RegistrationPage() {
                 <br />
                 <div className="p-5">
                   {registrations && registrations.length > 0 && (
-                    <Button
-                      className="w-full"
-                      onClick={downloadRegistrationPDF}
-                    >
+                    <Button className="w-full" onClick={downloadRegistrationPDF}>
                       Download Registration
                     </Button>
                   )}
@@ -168,7 +149,8 @@ function RegistrationPage() {
             {/* Right */}
             <div className="w-full lg:w-[50%] flex flex-col gap-5">
               <div className="border p-5 rounded-md">
-                <h4>Biometric Registration</h4>
+                <h4 className="underline">Biometric Registration</h4>
+                <BiometricRegistration user={currentUserDetails} />
               </div>
             </div>
           </div>
