@@ -1,16 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Loader from "@/components/ui/loader";
-import { auth, db } from "@/lib/firebase";
+import { auth, db, storage } from "@/lib/firebase";
 import normalizeFirebaseErrorMessage from "@/utils/firebase-errors";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { addDoc, collection } from "firebase/firestore";
-import { useState } from "react";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { z } from "zod";
+import Webcam from "react-webcam";
 
 const formSchema = z.object({
   displayName: z.string().min(5, {
@@ -36,6 +38,9 @@ function SignUpForm() {
   const navigate = useNavigate();
   const [isSubmittingForm, setIsSubmittingForm] = useState(false);
   const [error, setError] = useState("");
+  const [imageError, setImageError] = useState("");
+  const [image, setImage] = useState(null);
+  const webcamRef = useRef(null);
 
   const {
     register,
@@ -45,7 +50,18 @@ function SignUpForm() {
     resolver: zodResolver(formSchema),
   });
 
+  const capture = () => {
+    const imageSrc = webcamRef.current.getScreenshot();
+    setImage(imageSrc);
+    setImageError("");
+  };
+
   const onSubmit = async (data) => {
+    if (!image) {
+      setImageError("Please capture your photo before signing up.");
+      return;
+    }
+
     setIsSubmittingForm(true);
     setError("");
     try {
@@ -60,14 +76,21 @@ function SignUpForm() {
         displayName: data.displayName,
       });
 
+      const storageRef = ref(storage, `users/${user.uid}/profile.jpg`);
+      const response = await fetch(image);
+      const blob = await response.blob();
+      await uploadBytes(storageRef, blob);
+      const photoURL = await getDownloadURL(storageRef);
+
       const usersRef = collection(db, "users");
 
       await addDoc(usersRef, {
         name: data.displayName,
         email: data.email,
         hasRegistered: false,
-        uid: userCredential.user.uid,
+        uid: user.uid,
         index_number: data.index_number,
+        photoURL,
       });
 
       navigate("/sign-in");
@@ -82,13 +105,13 @@ function SignUpForm() {
   };
 
   return (
-    <div className="w-full min-h-screen flex justify-between items-center">
-      <div className="hidden md:block w-full md:w-1/2 min-h-screen bg-primary p-8 text-white">
+    <div className="w-full min-h-screen flex justify-between items-stretch">
+      <div className="hidden md:block w-full md:w-1/4 min-h-screen bg-primary p-8 text-white">
         <h3>SecureCourse</h3>
         <p>Course Registrations Made Easy.</p>
       </div>
-      <div className="w-full md:w-1/2 px-5 py-8 lg:px-16">
-        <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="w-full md:w-3/4 px-5 py-8 lg:px-16">
+        <form onSubmit={handleSubmit(onSubmit)} className="max-w-md mx-auto">
           <div className="my-5">
             <h5 className="text-primary">Sign Up</h5>
             <p className="text-neutral-500">
@@ -144,6 +167,28 @@ function SignUpForm() {
               </p>
             )}
           </div>
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700">
+              Student Selfie
+            </label>
+            <Webcam
+              audio={false}
+              ref={webcamRef}
+              screenshotFormat="image/jpeg"
+            />
+            <Button
+              type="button"
+              onClick={capture}
+              variant="secondary"
+              className="my-2 w-full"
+            >
+              Capture Photo
+            </Button>
+            {imageError && (
+              <p className="mt-2 text-sm text-red-600">{imageError}</p>
+            )}
+            {image && <img src={image} alt="Captured" />}
+          </div>
           <Button
             type="submit"
             className="w-full"
@@ -158,7 +203,7 @@ function SignUpForm() {
               Terms of Service
             </span>{" "}
             and{" "}
-            <span className="text-primary hover:underline font-semibold ease duration-150 cursor-pointer">
+            <span class="text-primary hover:underline font-semibold ease duration-150 cursor-pointer">
               Privacy Policy
             </span>
             .
